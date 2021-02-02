@@ -39,3 +39,19 @@ if __name__ == '__main__':
     for y, xlist in enumerate(room.light_matrix):
         print(f'{y}:  |  {xlist}')
     print(f'\nEmpty Spots Count: {len(room.empty_spots)} | {room.empty_spots}')
+
+
+    # Or (Example 3)
+    print('\n\n')
+    room = Room.from_coords(n=8, lights=[(4, 4), (5,5)], l=6)
+
+    # Print Room
+    print('\n\nEXAMPLE 3')
+    print('Given Room: ')
+    for y, xlist in enumerate(room.original_matrix):
+        print(f'{y}:  |  {xlist}')
+
+    print(f'\nCalculated Lights (Light strengh: {room.l})')
+    for y, xlist in enumerate(room.light_matrix):
+        print(f'{y}:  |  {xlist}')
+    print(f'\nEmpty Spots Count: {len(room.empty_spots)} | {room.empty_spots}')
