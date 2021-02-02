@@ -20,6 +20,7 @@ Output:
 - 1 1 1 1 0
 - 0 0 0 0 0
 
+**Tempo di risoluzione: Circa 1 ora e 10 minuti**
 
 ## Utilizzo
 #### PARTENDO DA UNA MATRICE
