@@ -26,6 +26,8 @@ class Room:
 
         # Map the room matrix into a room object
         for y, xline in enumerate(room):
+            if len(xline) != self.n:
+                raise ValueError(xline)
             for x, value in enumerate(xline):
                 if value in ('c', 'C'):
                     spot = LightSpot(x, y, l)
@@ -116,7 +118,7 @@ class Room:
 
 
     @classmethod
-    def from_coords(cls, n:int, l:int, lights:Union[Tuple[int, int], List[Tuple[int, int]]], ):
+    def from_coords(cls, n:int, l:int, lights:Union[Tuple[int, int], List[Tuple[int, int]]]):
         """Generate a room object.
 
         Create a room object by it's lenght and coordinates of any light points.
@@ -124,17 +126,26 @@ class Room:
         Args:
             n (int): Size of the room
             l (int): Strenght of the light points
-            lights (Union[Tuple[int, int], List[Tuple[int, int]]]): List of coordinates
-                of the various light points.
+            lights (Union[Tuple[int, int], List[Tuple[int, int]]]): List 
+                of coordinates of the various light points (x, y)
             
 
         Returns:
             [type]: [description]
         """
+        for coord in lights:
+            if len(coord) > 2 or len(coord) < 2:
+                raise ValueError(coord)
+            elif coord[0] not in range(0, n):
+                raise ValueError(coord)
+            elif coord[1] not in range(0, n):
+                raise ValueError(coord)
+            
         matrix:List[List] = cls.empty_room(n)
 
         if isinstance(lights, tuple):
             lights = [lights]
+
         for x, xlist in enumerate(matrix):
             for y, value in enumerate(xlist):
                 coord = (x, y)

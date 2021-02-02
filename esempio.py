@@ -7,7 +7,7 @@ if __name__ == '__main__':
 
 
     # Example given in the exercise:
-    room_matrix = [['x', 'x', 'x', 'x', 'x'], ['X', 'C', 'X', 'X', 'X'], ['x', 'x', 'x', 'x', 'x'], ['x', 'x', 'x', 'x', 'x'], ['x', 'x', 'x', 'x', 'x']]
+    room_matrix = [['x', 'x', 'x', 'x', 'x'], ['x', 'C', 'X', 'X', 'X'], ['x', 'x', 'x', 'x', 'x'], ['x', 'x', 'x', 'x', 'x'], ['x', 'x', 'x', 'x', 'x']]
     light_strengh = 3
 
     # Initialize Room Object
@@ -43,7 +43,7 @@ if __name__ == '__main__':
 
     # Or (Example 3)
     print('\n\n')
-    room = Room.from_coords(n=8, lights=[(4, 4), (5,5)], l=6)
+    room = Room.from_coords(n=8, lights=[(4, 4), (0,7)], l=6)
 
     # Print Room
     print('\n\nEXAMPLE 3')
