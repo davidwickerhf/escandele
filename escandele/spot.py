@@ -50,7 +50,7 @@ class Spot:
         elif self.y == spot.y:
             return abs(self.x - spot.x)
 
-        dxx = abs(self.x - spot.y)
+        dxx = abs(self.x - spot.x)
         dyy = abs(self.y - spot.y)
         return max(dxx, dyy)
 

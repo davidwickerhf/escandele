@@ -47,7 +47,7 @@ class Room:
         spot in the room.
         """
         for spot in self.spots:
-            spot.assign_light(self.lights)   
+            spot.assign_light(self.lights)  
 
 
     @property

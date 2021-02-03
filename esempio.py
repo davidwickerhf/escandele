@@ -22,7 +22,7 @@ if __name__ == '__main__':
     print(f'\nCalculated Lights (Light strengh: {room.l})')
     for y, xlist in enumerate(room.light_matrix):
         print(f'{y}:  |  {xlist}')
-    print(f'\nEmpty Spots Count: {len(room.empty_spots)} | {room.empty_spots}')
+    print(f'\nEmpty Spots Count: {len(room.empty_spots)}')
 
 
     # Or (Example 2)
@@ -38,12 +38,12 @@ if __name__ == '__main__':
     print(f'\nCalculated Lights (Light strengh: {room.l})')
     for y, xlist in enumerate(room.light_matrix):
         print(f'{y}:  |  {xlist}')
-    print(f'\nEmpty Spots Count: {len(room.empty_spots)} | {room.empty_spots}')
+    print(f'\nEmpty Spots Count: {len(room.empty_spots)}')
 
 
     # Or (Example 3)
     print('\n\n')
-    room = Room.from_coords(n=8, lights=[(4, 4), (0,7)], l=6)
+    room = Room.from_coords(n=9, lights=[(0, 5), (8, 5)], l=4)
 
     # Print Room
     print('\n\nEXAMPLE 3')
@@ -54,4 +54,4 @@ if __name__ == '__main__':
     print(f'\nCalculated Lights (Light strengh: {room.l})')
     for y, xlist in enumerate(room.light_matrix):
         print(f'{y}:  |  {xlist}')
-    print(f'\nEmpty Spots Count: {len(room.empty_spots)} | {room.empty_spots}')
+    print(f'\nEmpty Spots Count: {len(room.empty_spots)}')
